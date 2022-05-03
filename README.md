@@ -1,14 +1,14 @@
 <p align="center">
-  <img src="./source/images/logo.png" alt="Logo" width="auto" height="80">
+  <img src="./source/images/logo.png" alt="Logo" width="auto" height="200">
   <h1 align="center">Slate Demo</h1>
 
   <p align="center">
 
 <p align="center">Slate helps you create beautiful, intelligent, responsive API documentation.</p>
 
-<p align="center"><img src="./source/images/screenshot.png" width=700 alt="Screenshot of Example Documentation created with Slate"></p>
+<!-- <p align="center"><img src="./source/images/screenshot.png" width=700 alt="Screenshot of Example Documentation created with Slate"></p> -->
 
-<p align="center"><em>The example above was created with Slate. Check it out at <a href="https://slatedocs.github.io/slate">slatedocs.github.io/slate</a>.</em></p>
+
 
 Features
 ------------
