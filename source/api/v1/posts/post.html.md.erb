@@ -1,0 +1,279 @@
+# Post Module
+This is the api documentation of the post module
+
+## Get all posts
+```python
+import requests
+
+url = "https://jsonplaceholder.typicode.com/posts"
+
+payload={}
+headers = {}
+
+response = requests.request("GET", url, headers=headers, data=payload)
+
+print(response.text)
+
+```
+```javascript
+var axios = require('axios');
+
+var config = {
+  method: 'get',
+  url: 'https://jsonplaceholder.typicode.com/posts',
+  headers: { }
+};
+
+axios(config)
+.then(function (response) {
+  console.log(JSON.stringify(response.data));
+})
+.catch(function (error) {
+  console.log(error);
+});
+
+```
+> This is the response we should recieve.
+
+```json
+[
+    {
+        "userId": 1,
+        "id": 1,
+        "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+        "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+    },
+    {
+        "userId": 1,
+        "id": 2,
+        "title": "qui est esse",
+        "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+    },
+]
+```
+This request retreives all posts (up to 100).
+### Request Information
+|Category|Value|
+|---------|-------|
+|Http request| `GET`|
+|URL|https://jsonplaceholder.typicode.com/posts|
+### Headers
+No headers required
+### Input Schema for requests
+No input schema
+### Output Schema for requests
+|Field|Meaning|
+|-----|--------|
+|userId| Id of the user|
+|id|Id of the post|
+|title|Title of the post|
+|body|Body of the post|
+## Get a single post
+```python
+import requests
+
+url = "https://jsonplaceholder.typicode.com/posts/1"
+
+payload={}
+headers = {}
+
+response = requests.request("GET", url, headers=headers, data=payload)
+
+print(response.text)
+
+```
+```javascript
+var axios = require('axios');
+
+var config = {
+  method: 'get',
+  url: 'https://jsonplaceholder.typicode.com/posts/1',
+  headers: { }
+};
+
+axios(config)
+.then(function (response) {
+  console.log(JSON.stringify(response.data));
+})
+.catch(function (error) {
+  console.log(error);
+});
+
+```
+> This is the response you should recieve.
+
+```json
+
+{
+    "userId": 1,
+    "id": 1,
+    "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+    "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+}
+```
+This request retreives 1 post.
+### Request Information
+|Category|Value|
+|---------|-------|
+|Http request| `GET`|
+|URL|https://jsonplaceholder.typicode.com/posts/1|
+### Headers
+No headers required
+### Input Schema for requests
+No input schema
+### Output Schema for requests
+|Field|Meaning|
+|-----|--------|
+|userId| Id of the user|
+|id|Id of the post|
+|title|Title of the post|
+|body|Body of the post|
+
+## Get comments of a post
+```python
+import requests
+
+url = "https://jsonplaceholder.typicode.com/comments?postId=1"
+
+payload={}
+headers = {}
+
+response = requests.request("GET", url, headers=headers, data=payload)
+
+print(response.text)
+```
+```javascript
+var axios = require('axios');
+
+var config = {
+  method: 'get',
+  url: 'https://jsonplaceholder.typicode.com/comments?postId=1',
+  headers: { }
+};
+
+axios(config)
+.then(function (response) {
+  console.log(JSON.stringify(response.data));
+})
+.catch(function (error) {
+  console.log(error);
+});
+```
+>This is the response you should recieve.
+
+```json
+[
+    {
+        "postId": 1,
+        "id": 1,
+        "name": "id labore ex et quam laborum",
+        "email": "Eliseo@gardner.biz",
+        "body": "laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium"
+    },
+    {
+        "postId": 1,
+        "id": 2,
+        "name": "quo vero reiciendis velit similique earum",
+        "email": "Jayne_Kuhic@sydney.com",
+        "body": "est natus enim nihil est dolore omnis voluptatem numquam\net omnis occaecati quod ullam at\nvoluptatem error expedita pariatur\nnihil sint nostrum voluptatem reiciendis et"
+    },
+    
+  ]
+```
+
+This request retreives 1 post based on the postId.
+
+### Request Information
+
+|Category|Value|
+|---------|-------|
+|Http request| `GET`|
+|URL|https://jsonplaceholder.typicode.com/comments?postId=1|
+
+|Query Params|Description|Required|
+|postId|Id of the post| `true`
+
+### Headers
+No headers required
+### Input Schema for requests
+No input schema
+### Output Schema for requests
+
+|Field|Meaning|Optional|
+|-----|--------|-----|
+|postId|PostId of the post|
+|id|Id of the post|
+|name|Name of the user|
+|email|Emaiil of the user|
+|body|Body of the post|
+## Get posts of an user
+
+```python
+import requests
+
+url = "https://jsonplaceholder.typicode.com/posts?userId=2"
+
+payload={}
+headers = {}
+
+response = requests.request("GET", url, headers=headers, data=payload)
+
+print(response.text)
+```
+```javascript
+var axios = require('axios');
+
+var config = {
+  method: 'get',
+  url: 'https://jsonplaceholder.typicode.com/posts?userId=2',
+  headers: { }
+};
+
+axios(config)
+.then(function (response) {
+  console.log(JSON.stringify(response.data));
+})
+.catch(function (error) {
+  console.log(error);
+});
+```
+>This is the response you should recieve.
+
+```json
+[
+    {
+        "userId": 2,
+        "id": 11,
+        "title": "et ea vero quia laudantium autem",
+        "body": "delectus reiciendis molestiae occaecati non minima eveniet qui voluptatibus\naccusamus in eum beatae sit\nvel qui neque voluptates ut commodi qui incidunt\nut animi commodi"
+    },
+    {
+        "userId": 2,
+        "id": 12,
+        "title": "in quibusdam tempore odit est dolorem",
+        "body": "itaque id aut magnam\npraesentium quia et ea odit et ea voluptas et\nsapiente quia nihil amet occaecati quia id voluptatem\nincidunt ea est distinctio odio"
+    },
+  ]
+```
+### Request Information
+
+|Category|Value|
+|---------|-------|
+|Http request| `GET`|
+|URL|https://jsonplaceholder.typicode.com/posts?userId=2|
+
+|Query Params|Description|Required|
+|userId|UserId of the post| `true`
+
+### Headers
+No headers required
+### Input Schema for requests
+No input schema
+### Output Schema for requests
+
+|Field|Meaning|Optional|
+|-----|--------|-----|
+|userId|UserId of the post|
+|id|Id of the post|
+|title|Title of the post|
+|body|Body of the post|
