@@ -6,7 +6,7 @@
 
 <p align="center">Slate helps you create beautiful, intelligent, responsive API documentation.</p>
 
-<!-- <p align="center"><img src="./source/assets/custom-slate-apidocs.png" width=700 alt="Screenshot of Example Documentation created with Slate"></p> -->
+<p align="center"><img src="./source/assets/custom-slate-apidocs.png" width=700 alt="Screenshot of Example Documentation created with Slate"></p>
 
 
 
